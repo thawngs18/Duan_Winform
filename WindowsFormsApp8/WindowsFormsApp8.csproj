@@ -229,6 +229,7 @@
     <None Include="Resources\customer.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\mail.png" />
     <None Include="Resources\refresh %281%29.png" />
     <None Include="Resources\refresh.png" />
     <None Include="Resources\showpass %281%29.png" />

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ve));
             this.pnlVe = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblPhong = new System.Windows.Forms.Label();
@@ -43,10 +42,10 @@
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.pnlQR = new System.Windows.Forms.Panel();
             this.pnl_Email = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txt_mailnhan = new System.Windows.Forms.TextBox();
-            this.btn_XN = new System.Windows.Forms.Button();
             this.btn_huy = new System.Windows.Forms.Button();
+            this.btn_XN = new System.Windows.Forms.Button();
+            this.txt_mailnhan = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.pnlVe.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -163,7 +162,7 @@
             // toolStripButton3
             // 
             this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.Image = global::WindowsFormsApp8.Properties.Resources.mail;
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
             this.toolStripButton3.Size = new System.Drawing.Size(24, 24);
@@ -188,23 +187,15 @@
             this.pnl_Email.Size = new System.Drawing.Size(364, 364);
             this.pnl_Email.TabIndex = 7;
             // 
-            // label2
+            // btn_huy
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(53, 61);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 18);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Email Nhan Ve";
-            // 
-            // txt_mailnhan
-            // 
-            this.txt_mailnhan.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_mailnhan.Location = new System.Drawing.Point(49, 88);
-            this.txt_mailnhan.Name = "txt_mailnhan";
-            this.txt_mailnhan.Size = new System.Drawing.Size(261, 24);
-            this.txt_mailnhan.TabIndex = 1;
+            this.btn_huy.Location = new System.Drawing.Point(49, 151);
+            this.btn_huy.Name = "btn_huy";
+            this.btn_huy.Size = new System.Drawing.Size(118, 23);
+            this.btn_huy.TabIndex = 3;
+            this.btn_huy.Text = "Huy";
+            this.btn_huy.UseVisualStyleBackColor = true;
+            this.btn_huy.Click += new System.EventHandler(this.btn_huy_Click);
             // 
             // btn_XN
             // 
@@ -216,15 +207,23 @@
             this.btn_XN.UseVisualStyleBackColor = true;
             this.btn_XN.Click += new System.EventHandler(this.btn_XN_Click);
             // 
-            // btn_huy
+            // txt_mailnhan
             // 
-            this.btn_huy.Location = new System.Drawing.Point(49, 151);
-            this.btn_huy.Name = "btn_huy";
-            this.btn_huy.Size = new System.Drawing.Size(118, 23);
-            this.btn_huy.TabIndex = 3;
-            this.btn_huy.Text = "Huy";
-            this.btn_huy.UseVisualStyleBackColor = true;
-            this.btn_huy.Click += new System.EventHandler(this.btn_huy_Click);
+            this.txt_mailnhan.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_mailnhan.Location = new System.Drawing.Point(49, 88);
+            this.txt_mailnhan.Name = "txt_mailnhan";
+            this.txt_mailnhan.Size = new System.Drawing.Size(261, 24);
+            this.txt_mailnhan.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(53, 61);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(118, 18);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Email Nhan Ve";
             // 
             // Ve
             // 
