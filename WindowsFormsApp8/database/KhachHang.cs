@@ -26,7 +26,5 @@ namespace WindowsFormsApp8.database
         public string SDT { get; set; }
 
         public int CMND { get; set; }
-
-        public int? DiemTichLuy { get; set; }
     }
 }

@@ -655,7 +655,6 @@ namespace WindowsFormsApp8
                                                 kh.DiaChi,
                                                 kh.SDT,
                                                 kh.CMND,
-                                                kh.DiemTichLuy
                                             }).ToList();
 
                     // Gán dữ liệu vào DataGridView
@@ -684,7 +683,7 @@ namespace WindowsFormsApp8
                         DiaChi = txtDiaChiKH.Text,
                         SDT = txtSDTKH.Text,
                         CMND = int.Parse(txtCMNDKH.Text),
-                        DiemTichLuy = int.Parse(nmupdownKH.Value.ToString())
+                      
                     };
 
                     // Thêm khách hàng vào DbSet
@@ -756,7 +755,7 @@ namespace WindowsFormsApp8
                             khachHang.DiaChi = txtDiaChiKH.Text;
                             khachHang.SDT = txtSDTKH.Text;
                             khachHang.CMND = int.Parse(txtCMNDKH.Text);
-                            khachHang.DiemTichLuy = int.Parse(nmupdownKH.Value.ToString());
+
 
                             context.SaveChanges(); // Lưu thay đổi vào cơ sở dữ liệu
                             MessageBox.Show("Cập nhật thông tin khách hàng thành công!");
@@ -806,16 +805,8 @@ namespace WindowsFormsApp8
                 txtSDTKH.Text = row.Cells["SDT"].Value?.ToString();
                 txtCMNDKH.Text = row.Cells["CMND"].Value?.ToString();
 
-                // Gán giá trị điểm tích lũy vào NumericUpDown
-                var value = row.Cells["DiemTichLuy"].Value;
-                if (value != null && int.TryParse(value.ToString(), out int diemTichLuy))
-                {
-                    nmupdownKH.Value = diemTichLuy;
-                }
-                else
-                {
-                    nmupdownKH.Value = nmupdownKH.Minimum;
-                }
+
+          
             }
         }
 
@@ -1342,6 +1333,7 @@ namespace WindowsFormsApp8
                                               p.ThoiLuong,
                                               p.NgayKhoiChieu,
                                               p.NgayKetThuc,
+                                              p.SanXuat,
                                               p.DaoDien,
                                               p.NamSX,
                                               
